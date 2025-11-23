@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+body {
+    font-family: "Playwrite CL", serif;
+    background-color: #141414;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    /* Pour une transition douce des changements de style */
+    transition: all 0.3s ease; 
+}
+
+.page {
+    margin: 20px 80px;
+}
+
+/* Barre de navigation */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: flex;
+    top: 0;
+    background-color: #1f1f1f;
+    padding: 15px 20px;
+    border-bottom: 2px solid #d473d4;
+    z-index: 1000;
+    border-radius: 8px;
+}
+
+/* Styles généraux des boutons */
+button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+h4, h5 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+}
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+nav .onglets {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+nav .onglets a {
+    margin-right: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav .onglets a:hover {
+    color: #35807e;
+}
+
+nav .buttons button {
+    padding: 12px 20px;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Styles spécifiques pour les boutons "login" et "register" (si utilisés) */
+nav .buttons .login {
+    background-color: #ffffff;
+    margin-right: 10px;
+    color: #8f8f8f;
+}
+
+nav .buttons .login:hover {
+    background-color: #ffffff;
+    transform: scale(1.05);
+    color: #fff;
+}
+
+nav .buttons .register {
+    background-color: #ffffff;
+    margin-right: 10px;
+    color: #fff;
+}
+
+nav .buttons .register:hover {
+    background-color: #ffffff;
+    transform: scale(1.05);
+}
+
+header {
+    margin-top: 40px;
+    background-image: url('https://imgs.search.brave.com/7grkLcaj0fDaWds51zPGCEK-NkiMeHIsl3ZDr7-tkfU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/Zm9uZGVjcmFudmlw/LmNvbS8yMDI1LzAx/L0pFYXdjVVFRLWZv/bmQtZGVjcmFuLWNv/dWNoZXItZGUtc29s/ZWlsLTYyLndlYnA');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover ;
+    border-radius: 123px;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 60px;
+    padding: 200px 20px;
+    margin: 0;
+    color: #fff;
+    background: transparent;
+    box-shadow: none; 
+}
+
+footer {
+    background-color: #181818;
+    color: #fff;
+    text-align: left;
+    padding: 20px;
+    margin-top: 300px;
+    border-radius: 8px;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+img{
+    float: right;
+}
+
+/* Media Queries pour la responsivité */
+
+/* Pour les écrans de taille moyenne (tablettes) */
+@media (max-width: 1024px) {
+    .page {
+        margin: 15px 40px; /* Réduire les marges latérales */
+    }
+
+    nav {
+        flex-direction: column; /* Empiler les éléments de navigation */
+        align-items: center; /* Centrer les éléments */
+        padding: 10px; /* Réduire le padding */
+    }
+
+    nav .onglets {
+        flex-direction: column; /* Empiler les liens */
+        width: 100%; /* Occuper toute la largeur */
+        margin-bottom: 15px; /* Ajouter de l'espace en dessous */
+    }
+
+    nav .onglets a {
+        margin: 5px 0; /* Réduire les marges entre les liens */
+        padding: 8px 0; /* Ajouter du padding pour faciliter le toucher */
+        width: 100%; /* Les liens occupent toute la largeur */
+        text-align: center; /* Centrer le texte */
+    }
+
+    nav .buttons {
+        width: 100%; /* Occuper toute la largeur */
+        display: flex; /* Utiliser flex pour les boutons */
+        justify-content: center; /* Centrer les boutons */
+    }
+
+    nav .buttons button {
+        margin: 5px 10px; /* Réduire les marges entre les boutons */
+        width: auto; /* Largeur automatique */
+    }
+
+    header h1 {
+        font-size: 45px; /* Réduire la taille de la police du titre */
+        padding: 150px 10px; /* Ajuster le padding */
+    }
+
+    footer {
+        margin-top: 150px; /* Réduire la marge du pied de page */
+        text-align: center; /* Centrer le texte du pied de page */
+    }
+}
+
+/* Pour les petits écrans (smartphones) */
+@media (max-width: 768px) {
+    .page {
+        margin: 10px 20px; /* Réduire encore plus les marges latérales */
+    }
+
+    nav {
+        padding: 10px; /* Ajuster le padding */
+    }
+
+    nav .onglets a {
+        font-size: 14px; /* Réduire la taille de la police des liens */
+        margin: 3px 0;
+    }
+
+    nav .buttons button {
+        font-size: 13px; /* Réduire la taille de la police des boutons */
+        padding: 10px 15px; /* Ajuster le padding des boutons */
+    }
+
+    header h1 {
+        font-size: 35px; /* Réduire davantage la taille de la police du titre */
+        padding: 100px 10px; /* Ajuster le padding */
+    }
+
+    footer {
+        margin-top: 100px; /* Réduire la marge du pied de page */
+        font-size: 13px; /* Réduire la taille de la police du pied de page */
+        padding: 15px; /* Ajuster le padding */
+    }
+    
+    img {
+        float: none; /* Ne pas faire flotter l'image */
+        display: block; /* Mettre l'image sur une nouvelle ligne */
+        margin: 0 auto; /* Centrer l'image */
+        max-width: 100%; /* S'assurer que l'image ne déborde pas */
+        height: auto; /* Maintenir les proportions */
+    }
+}
+
+/* Pour les très petits écrans (smartphones étroits) */
+@media (max-width: 480px) {
+    .page {
+        margin: 5px 10px; /* Très petites marges */
+    }
+
+    nav {
+        padding: 8px; /* Très petit padding */
+    }
+
+    nav .buttons button {
+        font-size: 12px; /* Très petite taille de police pour les boutons */
+        padding: 8px 12px; /* Très petit padding pour les boutons */
+    }
+
+    header h1 {
+        font-size: 28px; /* Très petite taille de police pour le titre */
+        padding: 80px 5px; /* Très petit padding pour le titre */
+    }
+
+    footer {
+        margin-top: 50px; /* Moins de marge pour le pied de page */
+        font-size: 12px; /* Très petite taille de police pour le pied de page */
+        padding: 10px; /* Très petit padding pour le pied de page */
+    }
+}
