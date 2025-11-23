@@ -8,7 +8,8 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="animation.css">
   <link rel="icon" type="image/png" href="https://cf-st.sc-cdn.net/3d/render/36678564-103225981400_8-s5-v1.webp?trim=circle&scale=0&ua=2">
-  <style>@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+  <style>
+      @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
 body {
     font-family: "Playwrite CL", serif;
@@ -113,10 +114,11 @@ nav .buttons .register:hover {
     transform: scale(1.05);
 }
 
-/* Style TikTok appliqué à l'ancien bouton 'snap' */
+/* NOUVEAU : Style TikTok appliqué au bouton '#snap' */
 #snap {
     background-color: #fe2c55; /* Couleur rouge TikTok */
-    color: white;
+    color: white !important; /* IMPORTANT : Assure que le texte est blanc */
+    font-weight: bold; /* Rendre le texte plus lisible */
 }
 #snap:hover {
     background-color: #d42248;
@@ -163,7 +165,6 @@ img{
 
 /* Media Queries pour la responsivité */
 
-/* ... (Le CSS Media Queries reste inchangé) ... */
 @media (max-width: 1024px) {
     .page {
         margin: 15px 40px; 
@@ -299,12 +300,12 @@ img{
     tiktok-developers-site-verification=RHO0WdjRgr6pM3ArYTIsfaeCM0sMAcam
   </footer>
   <script>
-    // --- NOUVELLE LOGIQUE TIKTOK SUR LE BOUTON 'snap' ---
-    const tiktokButton = document.getElementById('snap'); // Utilise l'ID existant 'snap'
+    // --- LOGIQUE TIKTOK SUR LE BOUTON 'snap' ---
+    const tiktokButton = document.getElementById('snap'); 
     
     tiktokButton.addEventListener('click', () => {
         // !!! REMPLACEZ 'VOTRE_CLIENT_KEY_TIKTOK' par votre vraie clé client TikTok !!!
-        const CLIENT_KEY = 'aw6ej6txoh8rb1l3'; 
+        const CLIENT_KEY = 'VOTRE_CLIENT_KEY_TIKTOK'; 
         // L'URI que vous avez configurée et vérifiée
         const REDIRECT_URI = 'https://nioko1187.github.io/celya/callback';
         
