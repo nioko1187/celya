@@ -59,8 +59,6 @@ h4, h5 {
 a {
     text-decoration: none;
     color: #ffffff;
-    /* Le bouton "Playlist TikTok" dans le footer ne doit pas hériter de ça,
-       mais on laisse ici car il n'y a pas d'autres liens */
 }
 
 nav .onglets {
@@ -115,12 +113,12 @@ nav .buttons .register:hover {
     transform: scale(1.05);
 }
 
-/* Ajout d'un style pour le bouton TikTok pour qu'il soit bien visible */
-#tiktok-playlist-button {
+/* Style TikTok appliqué à l'ancien bouton 'snap' */
+#snap {
     background-color: #fe2c55; /* Couleur rouge TikTok */
     color: white;
 }
-#tiktok-playlist-button:hover {
+#snap:hover {
     background-color: #d42248;
     transform: scale(1.05);
 }
@@ -165,117 +163,115 @@ img{
 
 /* Media Queries pour la responsivité */
 
-/* Pour les écrans de taille moyenne (tablettes) */
+/* ... (Le CSS Media Queries reste inchangé) ... */
 @media (max-width: 1024px) {
     .page {
-        margin: 15px 40px; /* Réduire les marges latérales */
+        margin: 15px 40px; 
     }
 
     nav {
-        flex-direction: column; /* Empiler les éléments de navigation */
-        align-items: center; /* Centrer les éléments */
-        padding: 10px; /* Réduire le padding */
+        flex-direction: column; 
+        align-items: center; 
+        padding: 10px; 
     }
 
     nav .onglets {
-        flex-direction: column; /* Empiler les liens */
-        width: 100%; /* Occuper toute la largeur */
-        margin-bottom: 15px; /* Ajouter de l'espace en dessous */
+        flex-direction: column; 
+        width: 100%; 
+        margin-bottom: 15px; 
     }
 
     nav .onglets a {
-        margin: 5px 0; /* Réduire les marges entre les liens */
-        padding: 8px 0; /* Ajouter du padding pour faciliter le toucher */
-        width: 100%; /* Les liens occupent toute la largeur */
-        text-align: center; /* Centrer le texte */
+        margin: 5px 0; 
+        padding: 8px 0; 
+        width: 100%; 
+        text-align: center; 
     }
 
     nav .buttons {
-        width: 100%; /* Occuper toute la largeur */
-        display: flex; /* Utiliser flex pour les boutons */
-        justify-content: center; /* Centrer les boutons */
+        width: 100%; 
+        display: flex; 
+        justify-content: center; 
     }
 
     nav .buttons button {
-        margin: 5px 10px; /* Réduire les marges entre les boutons */
-        width: auto; /* Largeur automatique */
+        margin: 5px 10px; 
+        width: auto; 
     }
 
     header h1 {
-        font-size: 45px; /* Réduire la taille de la police du titre */
-        padding: 150px 10px; /* Ajuster le padding */
+        font-size: 45px; 
+        padding: 150px 10px; 
     }
 
     footer {
-        margin-top: 150px; /* Réduire la marge du pied de page */
-        text-align: center; /* Centrer le texte du pied de page */
+        margin-top: 150px; 
+        text-align: center; 
     }
 }
 
-/* Pour les petits écrans (smartphones) */
 @media (max-width: 768px) {
     .page {
-        margin: 10px 20px; /* Réduire encore plus les marges latérales */
+        margin: 10px 20px; 
     }
 
     nav {
-        padding: 10px; /* Ajuster le padding */
+        padding: 10px; 
     }
 
     nav .onglets a {
-        font-size: 14px; /* Réduire la taille de la police des liens */
+        font-size: 14px; 
         margin: 3px 0;
     }
 
     nav .buttons button {
-        font-size: 13px; /* Réduire la taille de la police des boutons */
-        padding: 10px 15px; /* Ajuster le padding des boutons */
+        font-size: 13px; 
+        padding: 10px 15px; 
     }
 
     header h1 {
-        font-size: 35px; /* Réduire davantage la taille de la police du titre */
-        padding: 100px 10px; /* Ajuster le padding */
+        font-size: 35px; 
+        padding: 100px 10px; 
     }
 
     footer {
-        margin-top: 100px; /* Réduire la marge du pied de page */
-        font-size: 13px; /* Réduire la taille de la police du pied de page */
-        padding: 15px; /* Ajuster le padding */
+        margin-top: 100px; 
+        font-size: 13px; 
+        padding: 15px; 
     }
     
     img {
-        float: none; /* Ne pas faire flotter l'image */
-        display: block; /* Mettre l'image sur une nouvelle ligne */
-        margin: 0 auto; /* Centrer l'image */
-        max-width: 100%; /* S'assurer que l'image ne déborde pas */
-        height: auto; /* Maintenir les proportions */
+        float: none; 
+        display: block; 
+        margin: 0 auto; 
+        max-width: 100%; 
+        height: auto; 
     }
 }
 
-/* Pour les très petits écrans (smartphones étroits) */
 @media (max-width: 480px) {
     .page {
-        margin: 5px 10px; /* Très petites marges */
+        margin: 5px 10px; 
     }
 
     nav {
-        padding: 8px; /* Très petit padding */
+        padding: 8px; 
     }
 
     nav .buttons button {
-        font-size: 12px; /* Très petite taille de police pour les boutons */
-        padding: 8px 12px; /* Très petit padding pour les boutons */
+        font-size: 12px; 
+        padding: 8px 12px; 
     }
 
     header h1 {
-        font-size: 28px; /* Très petite taille de police pour le titre */
-        padding: 80px 5px; /* Très petit padding pour le titre */
+        font-size: 28px; 
+        padding: 80px 5px; 
     }
 
     footer {
-        margin-top: 50px; /* Moins de marge pour le pied de page */
-        font-size: 12px; /* Très petite taille de police pour le pied de page */
-        padding: 10px; /* Très petit padding pour le pied de page */
+        margin-top: 50px; 
+        font-size: 12px; 
+        padding: 10px; 
     }
 }
 </style>
@@ -290,9 +286,8 @@ img{
         <a href="page5/5eme.html">Message de fin</a>
       </div>
       <div class="buttons">
-        <button id="snap">Son snap</button>
+                <button id="snap">Playlist TikTok</button> 
         <button id="menu-button">Menu</button>
-                <button id="tiktok-playlist-button" class="register">Playlist TikTok</button>
       </div>
     </nav>
     <header>
@@ -304,19 +299,9 @@ img{
     tiktok-developers-site-verification=RHO0WdjRgr6pM3ArYTIsfaeCM0sMAcam
   </footer>
   <script>
-    const serverButton = document.getElementById('snap');
-    serverButton.addEventListener('click', () => {
-        window.location.href = 'https://www.snapchat.com/add/sky-meee?share_id=1cciZUR4Q9g&locale=fr-FR';
-    });
-    const menuButton = document.getElementById('menu-button');
-    const body = document.body;
-    menuButton.addEventListener('click', () => {
-        window.location.href = 'page7/7eme.php'; 
-    });
-
-    // --- NOUVELLE LOGIQUE POUR LE BOUTON TIKTOK ---
-    const tiktokButton = document.getElementById('tiktok-playlist-button');
-
+    // --- NOUVELLE LOGIQUE TIKTOK SUR LE BOUTON 'snap' ---
+    const tiktokButton = document.getElementById('snap'); // Utilise l'ID existant 'snap'
+    
     tiktokButton.addEventListener('click', () => {
         // !!! REMPLACEZ 'VOTRE_CLIENT_KEY_TIKTOK' par votre vraie clé client TikTok !!!
         const CLIENT_KEY = 'aw6ej6txoh8rb1l3'; 
@@ -325,9 +310,7 @@ img{
         
         // Les scopes (permissions) que vous avez demandées :
         const SCOPES = 'user.info.profile,user.info.stats,video.list'; 
-        // Note: Assurez-vous que 'video.list' est bien celui que vous avez ajouté si l'API l'offre.
-
-        // 'state' est un jeton de sécurité. Il est préférable d'utiliser une valeur générée de manière unique.
+        
         const STATE = 'unique_string_pour_securite'; 
 
         const authUrl = `https://www.tiktok.com/v2/auth/authorize/` +
@@ -339,6 +322,13 @@ img{
 
         window.location.href = authUrl;
     });
+
+    // --- LOGIQUE EXISTANTE 'menu-button' ---
+    const menuButton = document.getElementById('menu-button');
+    const body = document.body;
+    menuButton.addEventListener('click', () => {
+        window.location.href = 'page7/7eme.php'; 
+    });
 
 </script> 
 </body>
