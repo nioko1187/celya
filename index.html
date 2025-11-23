@@ -303,29 +303,12 @@ img{
     <h5>Un site spéciallement conçu pour ma princesse <a href="page7/7eme.html">Célya</a></h5>
   </footer>
 <script>
-    // --- LOGIQUE TIKTOK SUR LE BOUTON 'snap' ---
-    const tiktokButton = document.getElementById('snap'); 
-    
-    tiktokButton.addEventListener('click', () => {
-        // La clé client a été remplacée par la valeur que vous avez fournie
-        const CLIENT_KEY = 'aw6ej6txoh8rb1l3'; 
-        // L'URI que vous avez configurée et vérifiée
-        const REDIRECT_URI = 'https://nioko1187.github.io/celya/callback';
-        
-        // Les scopes (permissions) que vous avez demandées :
-        const SCOPES = 'user.info.basic';
-        
-        const STATE = 'unique_string_pour_securite'; 
-
-        const authUrl = `https://www.tiktok.com/v2/auth/authorize/` +
-                        `?client_key=aw6ej6txoh8rb1l3` +
-                        `&response_type=code` +
-                        `&scope=${SCOPES}` +
-                        `&redirect_uri=${REDIRECT_URI}` +
-                        `&state=${STATE}`;
-
-        window.location.href = authUrl;
-    });
+    // --- LOGIQUE EXISTANTE 'menu-button' ---
+    const menuButton = document.getElementById('snap');
+    const body = document.body;
+    menuButton.addEventListener('click', () => {
+        window.location.href = 'playlist_Version2.html'; 
+    });
 
     // --- LOGIQUE EXISTANTE 'menu-button' ---
     const menuButton = document.getElementById('menu-button');
@@ -337,6 +320,7 @@ img{
 </script>
 </body>
 </html>
+
 
 
 
