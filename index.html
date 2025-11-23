@@ -8,8 +8,7 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="animation.css">
   <link rel="icon" type="image/png" href="https://cf-st.sc-cdn.net/3d/render/36678564-103225981400_8-s5-v1.webp?trim=circle&scale=0&ua=2">
-  <style>
-      @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+  <style>@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
 body {
     font-family: "Playwrite CL", serif;
@@ -116,12 +115,12 @@ nav .buttons .register:hover {
 
 /* NOUVEAU : Style TikTok appliqué au bouton '#snap' */
 #snap {
-    background-color: #fe2c55; /* Couleur rouge TikTok */
-    color: white !important; /* IMPORTANT : Assure que le texte est blanc */
-    font-weight: bold; /* Rendre le texte plus lisible */
+    background-color: #fe2c55 !important; /* FORCÉ : S'assure d'écraser la couleur blanche de .register */
+    color: white !important; /* S'assure que le texte est blanc */
+    font-weight: bold; 
 }
 #snap:hover {
-    background-color: #d42248;
+    background-color: #d42248 !important;
     transform: scale(1.05);
 }
 
@@ -287,7 +286,7 @@ img{
         <a href="page5/5eme.html">Message de fin</a>
       </div>
       <div class="buttons">
-                <button id="snap">Playlist TikTok</button> 
+                <button id="snap" class="register">Playlist TikTok</button> 
         <button id="menu-button">Menu</button>
       </div>
     </nav>
