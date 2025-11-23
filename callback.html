@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Authentification TikTok en cours</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Connexion à TikTok en cours...</h1>
+    <p id="status">Récupération du code d'autorisation...</p>
+    
+    <script>
+        // Fonction pour extraire les paramètres de l'URL
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+
+        // --- 1. EXTRACTION DU CODE ---
+        const authCode = getUrlParameter('code');
+        const state = getUrlParameter('state');
+        const error = getUrlParameter('error');
+
+        const statusElement = document.getElementById('status');
+
+        if (error) {
+            statusElement.innerHTML = 'Erreur d\'authentification : ' + error;
+            console.error('Erreur TikTok:', error);
+        } else if (authCode) {
+            statusElement.innerHTML = 'Code d\'autorisation reçu. Échange du jeton en cours...';
+            console.log('Code d\'autorisation (Auth Code):', authCode);
+            // console.log('State:', state); // Le state doit être vérifié pour la sécurité
+
+            // --- 2. ÉCHANGE DU CODE (DOIT ÊTRE CÔTÉ SERVEUR !) ---
+            
+            // ATTENTION : Cette étape doit absolument être faite sur un serveur sécurisé (Backend)
+            // car elle nécessite votre CLIENT SECRET.
+            
+            // Sur un site statique comme GitHub Pages, vous devez :
+            // A. Envoyer l'authCode à un service backend sécurisé (ex: AWS Lambda, Netlify Functions, etc.).
+            // B. Ce service backend effectue l'appel à TikTok pour échanger l'authCode contre l'Access Token.
+            // C. Ce service backend renvoie l'Access Token (ou mieux, les données de l'utilisateur) à votre frontend.
+            
+            // Si vous tentez de faire l'échange ici avec fetch(), votre Client Secret sera visible.
+
+            // Exemple de ce qui se passe CÔTÉ SERVEUR (Ne doit PAS être dans ce fichier !)
+            /*
+            fetch('https://open-api.tiktok.com/oauth/access_token/', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                body: new URLSearchParams({
+                    client_key: 'VOTRE_CLIENT_KEY', // Peut être visible
+                    client_secret: 'VOTRE_CLIENT_SECRET', // DOIT ÊTRE CACHÉ
+                    code: authCode,
+                    grant_type: 'authorization_code',
+                    redirect_uri: 'VOTRE_REDIRECT_URI' 
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // ... Suite de la logique pour récupérer les vidéos ...
+            })
+            */
+            
+            // --- 3. LOGIQUE D'AFFICHAGE (après avoir reçu l'Access Token) ---
+            
+            // Si vous utilisez un service backend, le code ici devrait appeler ce service :
+            
+            /*
+            fetch('VOTRE_ENDPOINT_SERVEURLESS', {
+                method: 'POST',
+                body: JSON.stringify({ authCode: authCode, state: state }),
+                headers: { 'Content-Type': 'application/json' }
+            })
+            .then(response => response.json())
+            .then(playlistData => {
+                if (playlistData.access_token) {
+                    // Sauvegarder le token (localement) et afficher les données
+                    statusElement.innerHTML = 'Connexion réussie ! Affichage de la playlist...';
+                    // ... Insérer le code pour afficher les vidéos ici ...
+                } else {
+                    statusElement.innerHTML = 'Erreur lors de l\'échange de jeton.';
+                }
+            })
+            .catch(error => {
+                statusElement.innerHTML = 'Erreur de communication avec le serveur.';
+                console.error('Erreur:', error);
+            });
+            */
+            
+        } else {
+            statusElement.innerHTML = "Aucun code d'autorisation trouvé. Redirection invalide.";
+        }
+    </script>
+</body>
+</html>
