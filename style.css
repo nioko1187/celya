@@ -1,0 +1,92 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    background-color: #1F1F1F; /* Noir Profond */
+    color: #F5F5F5; /* Texte Blanc Cassé pour le contraste */
+}
+
+/* Style des titres et liens pour la cohérence */
+h1 {
+    color: #008080; /* Bleu Canard pour le titre */
+}
+a {
+    color: #b269ee; /* Mauve pour les liens (comme la playlist) */
+    /* ENLEVER LA SOULIGNEMENT DES LIENS POUR UN LOOK PLUS PROPRE */
+    text-decoration: none; 
+}
+a:hover {
+    text-decoration: underline; /* Réapparaît au survol */
+}
+.calendrier {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    text-decoration: white;
+    padding: 20px;
+}
+p{
+    font-size: 12px;
+}
+.jour {
+    width: 150px;
+    height: 150px;
+    background-color: #053a62; /* Rouge de Noël */
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: white;
+}
+.contenu-cache {
+    display: none; /* Cachez le contenu au départ */
+    color: white;
+    margin-top: 10px;
+    text-decoration: white;
+}
+.ouvert .contenu-cache {
+    display: block; /* Affichez le contenu quand la classe 'ouvert' est ajoutée */
+}
+button {
+    background-color: #048B9A; /* Or de Noël */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: white;
+
+}
+/* Gardez ce style si vous voulez centrer le cœur et le message */
+.coeur-container {
+    align-items: center; /* Centre horizontalement les éléments flex */
+    margin-top: 20px;
+    width: 100%; /* Important : assure que le conteneur prend toute la largeur disponible */
+    font-size: 50px;
+}
+
+/* Styles pour le message caché - CORRIGÉ */
+.message-cache {
+    display: none; /* Toujours caché par défaut */
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 18px;
+    text-align: center;
+    
+    /* Les corrections sont ici : */
+    max-width: 100%; /* Limite la largeur du message à 80% du conteneur parent */
+    width: 100%; /* Permet au message de s'adapter à son contenu */
+}
+
+.message-cache p {
+    display: flex;
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #333;
+    font-size: 16px;
+
+    
+}

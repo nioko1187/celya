@@ -1,118 +1,173 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ma princesse(Célya)🫶🫶</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="animation.css">
-  <link rel="icon" type="image/png" href="https://cf-st.sc-cdn.net/3d/render/36678564-103225981400_8-s5-v1.webp?trim=circle&scale=0&ua=2">
-  <style>
-    /* Ton style existant */
-    body {
-      font-family: "Playwrite CL", serif;
-      background-color: #141414;
-      margin: 0;
-      color: #fff;
-    }
-    nav {
-      display: flex;
-      justify-content: space-between;
-      background-color: #1f1f1f;
-      padding: 15px 20px;
-      border-bottom: 2px solid #d473d4;
-      border-radius: 8px;
-    }
-    nav .onglets a {
-      margin-right: 20px;
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    nav .onglets a:hover {
-      color: #35807e;
-    }
-    nav .buttons button {
-      padding: 12px 20px;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    #snap {
-      background-color: #fe2c55 !important;
-      color: white !important;
-      font-weight: bold;
-    }
-    #snap:hover {
-      background-color: #d42248 !important;
-      transform: scale(1.05);
-    }
-    footer {
-      background-color: #181818;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      margin-top: 50px;
-      border-radius: 8px;
-    }
-    /* Zone TikTok */
-    #tiktok-playlist {
-      margin: 30px auto;
-      max-width: 600px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Mon Cadeau de Noël Secret</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-  <section class="page">
-    <nav>
-      <div class="onglets">
-        <a href="page2/2eme.html">Présentation</a>
-        <a href="page3/3eme.html">Pourquoi elle est chou</a>
-        <a href="page4/4eme.html">Preuve quelle est bien plus chou que moi</a>
-        <a href="page5/5eme.html">Message de fin</a>
-      </div>
-      <div class="buttons">
-        <button id="snap">Playlist TikTok</button>
-        <button id="menu-button" class="register">Menu</button>
-      </div>
-    </nav>
 
-    <header>
-      <h1></h1>
-    </header>
-
-    <!-- Zone où les vidéos TikTok seront affichées -->
-    <div id="tiktok-playlist" style="display:none;">
-      <!-- Exemple d'intégration de vidéos TikTok -->
-      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@tiktok/video/7221234567890" data-video-id="7221234567890" style="max-width: 605px;min-width: 325px;">
-        <section></section>
-      </blockquote>
-
-      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@tiktok/video/7239876543210" data-video-id="7239876543210" style="max-width: 605px;min-width: 325px;">
-        <section></section>
-      </blockquote>
+    <h1>TADA TON CALENDRIER PERSO(ET GRATUIT😘)</h1>
+    
+    <div class="calendrier">
+        
+        <div class="jour" data-jour="1">
+            <button onclick="ouvrirJour(1)">Jour 1</button>
+            <div class="contenu-cache">
+                <p>Mon premier cadeau est : <a href="https://open.spotify.com/playlist/7bWJEIyX854rFbswniIBjl?si=e1ec2552ab4848e7">Une playlist faite avec des musique que j'écoute pour que tu me connaisses un peu mieux !</a></p>
+            </div>
+        </div>
+        <div class="jour" data-jour="2">
+            <button onclick="ouvrirJour(2)">Jour 2</button>
+            <div class="contenu-cache">
+                <p>Voilà des poème que j'ai fait pour toi (avec les conseil d'une pote) <a href="autre/poeme.html">Lire le poème</a></p>
+            </div>
+        </div>
+        <div class="jour" data-jour="3">
+            <button onclick="ouvrirJour(3)">Jour 3</button>
+            <div class="contenu-cache">
+                <p>3ème jour c'est une photo de moi (pas ouf le cadeau mais bon) <a href="autre/moi.jpg">Voir la photo</a></p>
+            </div>
+        </div>
+        <div class="jour" data-jour="4">
+            <button onclick="ouvrirJour(4)">Jour 4</button>
+            <div class="contenu-cache">
+                <p>Un petit message pour toi !!<a href="autre/texte.html">Lire le mot</a></p>
+            </div>
+        </div>
+        <div class="jour" data-jour="5">
+            <button onclick="ouvrirJour(5)">Jour 5</button>
+            <div class="contenu-cache">
+                <p>Une liste de chose que je voudrais faire avec toi quand on se verra ! <a href="autre/liste.html">Voir la liste</a></p>
+            </div>
+        </div>
+        <div class="jour" data-jour="6">
+            <button onclick="ouvrirJour(6)">Jour 6</button>
+            <div class="contenu-cache">
+                <p>Une liste de film que j'aimerai regarder avec toi ! <a href="autre/film.html">Voir la liste</a></p>
+            </div>
+        </div>
+        <div class="jour" data-jour="7">
+            <button onclick="ouvrirJour(7)">Jour 7</button>
+            <div class="contenu-cache">
+                <h3>Une citation drôle qu'on m'a toujours dite. <a href="autre/citation.html">Lire la citation</a></h3>
+            </div>
+        </div>
+        <div class="jour" data-jour="8">
+            <button onclick="ouvrirJour(8)">Jour 8</button>
+            <div class="contenu-cache">
+                <p>Des musiques que j'aime et que je veux partager avec toi.<a href="autre/musique.html" >Voir les musiques</a></p>
+            </div>
+        </div>
+        <div class="jour" data-jour="9">
+            <button onclick="ouvrirJour(9)">Jour 9</button>
+            <div class="contenu-cache">
+                <p>Liste de chose que j'admire chez toi ! <a href="autre/admiration.html">Voir la liste</a></p>
+            </div>
+        </div>
+        <div class="jour" data-jour="10">
+            <button onclick="ouvrirJour(10)">Jour 10</button>
+            <div class="contenu-cache">
+                <p>des meme que j'ai fait rien que pour toi. <a href="autre/meme.html">Voir les memes</a></p>
+            </div>
+        </div>     
+        <div class="jour" data-jour="11">
+            <button onclick="ouvrirJour(11)">Jour 11</button>
+            <div class="contenu-cache">
+                <p>Tu peux me poser la question la plus embarrassante que tu veux.</p>
+            </div>
+        </div>
+        <div class="jour" data-jour="12">
+            <button onclick="ouvrirJour(12)">Jour 12</button>
+            <div class="contenu-cache">
+                <p>Le film que j'ai regardé en secret cette semaine : Vaiana 2 (j'avais pas regarder). Tu juge pas !</p>
+            </div>
+        </div>
+        <div class="jour" data-jour="13">
+            <button onclick="ouvrirJour(13)">Jour 13</button>
+            <div class="contenu-cache">
+                <p>Mon plus grand rêve. <a href="autre/reve.html">Lire plus</a></p>
+            </div>
+        </div>
+        <div class="jour" data-jour="14">
+            <button onclick="ouvrirJour(14)">Jour 14</button>
+            <div class="contenu-cache">
+                <p>Savais-tu que l'energie nucléaire et l'énergie la plus verte au monde ?(j'ai rien trouver de mieux, et je l'ai vue en cours)</p>
+            </div>
+        </div>
+        <div class="jour" data-jour="15">
+            <button onclick="ouvrirJour(15)">Jour 15</button>
+            <div class="contenu-cache">
+                <p>Une histoire courte que j'ai inventée.<a href="autre/histoire.html">Lire l'histoire</a></p>
+            </div>
+        </div>
+        <div class="jour" data-jour="16">
+            <button onclick="ouvrirJour(16)">Jour 16</button>
+            <div class="contenu-cache">
+                <p><p>Une Tierlist de ce que je mange. <a href="autre/chose.html">Voir la Tierlist</a></p></p>
+            </div>
+        </div>
+        <div class="jour" data-jour="17">
+            <button onclick="ouvrirJour(17)">Jour 17</button>
+            <div class="contenu-cache">
+                <p>Une recette de mon plats favori. <a href="https://www.marmiton.org/recettes/recette_lasagnes-a-la-bolognaise_18215.aspx">Voir la recette</a></p>
+            </div>
+        </div>
+        <div class="jour" data-jour="18">
+            <button onclick="ouvrirJour(18)">Jour 18</button>
+            <div class="contenu-cache">
+                <p>Trois raisons pour lesquelles je suis si heureux de t'avoir trouvée : 1. Tu me rend heureux chaque jour 2. Personne n'a été aussi bienveillant avec moi avant 3. J'adore ta présence</p>
+            </div>
+        </div>
+        <div class="jour" data-jour="19">
+            <button onclick="ouvrirJour(19)">Jour 19</button>
+            <div class="contenu-cache">
+                <p>C'est exactement ma tête quand je vois ta notification ! <a href="https://c.tenor.com/iunt0_AmscoAAAAd/tenor.gif">Regarder mon humeur</a></p>
+            </div>
+        </div>
+        <div class="jour" data-jour="20">
+            <button onclick="ouvrirJour(20)">Jour 20</button>
+            <div class="contenu-cache">
+                <p><p>Je suis Bélier et apparemment on est 80% compatible(trouver sois sur un site de con sois sur un vrai truc) ! 😉</p></p>
+            </div>
+        </div>
+        
+        <div class="jour" data-jour="21">
+            <button onclick="ouvrirJour(21)">Jour 21</button>
+            <div class="contenu-cache">
+                <p>Les trois mots qui te décrivent le mieux : 1. Gentille 2. Magnifique 3. Douce.</p>
+            </div>
+        </div>
+        <div class="jour" data-jour="22">
+            <button onclick="ouvrirJour(22)">Jour 22</button>
+            <div class="contenu-cache">
+                <p><p>C'est ce que j'écoute tous les matins pour me réveiller ! <a href="autre/reveille.html">Écouter l'énergie</a></p></p>
+            </div>
+        </div>
+        <div class="jour" data-jour="23">
+            <button onclick="ouvrirJour(23)">Jour 23</button>
+            <div class="contenu-cache">
+                <p><p>Le livre/jeu qui a forgé mon enfance est : WII Sport a l'ancienne.</p></p>
+            </div>
+        </div>
+        <div class="jour" data-jour="24">
+            <button onclick="ouvrirJour(24)">Jour 24</button>
+            <div class="contenu-cache">
+                <p>Tu es la personne qui me fait sentir le plus épanouie à l'heure actuelle dans ma vie. Merci.</p>
+            </div>
+        </div>
+<div class="jour" data-jour="25">
+    <button onclick="ouvrirJour(25)">Jour 25</button>
+    <div class="contenu-cache">
+        <div class="coeur-container">
+            <span id="coeurAnimation" class="emoji-bouton">❤️</span>
+            <div id="messageFinal" class="message-cache">
+                <p>JOYEUX NOËL mon coeur ! Je voulais te remercier pour ces 7 mois (oui déjà) passé avec toi. J'adore chaque moment qu'on passe et je prie pour que cela continue encore longtemps.(le plus longtemps possible).Je sais que la surprise n'est pas ouf mais bon jme dis qu'un texte sortie tout droit du coeur sera mieux qu'un truc fait a la vas vite.Fin bref, tous sa pour te dire que je t'aime et que j'aimerai que notre relation continue ainsi(même évolué jdirais pas non),Je t'aime Célya n'en doute jamais parfois j'ai juste pas les mots pour te le dire ou encore les actions mais sa change pas mes sentiments envers toi et sa ne changera jamais.J'adore te rendre heureuse.Je t'aime mon coeur❤️ <br> Jean </p>
+                </div>
+        </div>
     </div>
-  </section>
+</div>
 
-  <footer>
-    <h5>Un site spécialement conçu pour ma princesse <a href="page7/7eme.html">Célya</a></h5>
-  </footer>
-
-  <!-- Script TikTok officiel -->
-  <script async src="https://www.tiktok.com/embed.js"></script>
-
-  <script>
-    // Bouton Playlist TikTok
-    const snapButton = document.getElementById('snap');
-    const playlist = document.getElementById('tiktok-playlist');
-    snapButton.addEventListener('click', () => {
-      playlist.style.display = (playlist.style.display === 'none') ? 'block' : 'none';
-    });
-
-    // Bouton Menu
-    const menuButton = document.getElementById('menu-button');
-    menuButton.addEventListener('click', () => {
-      window.location.href = 'page7/7eme.php';
-    });
-  </script>
+    <script src="script.js"></script>
 </body>
 </html>
